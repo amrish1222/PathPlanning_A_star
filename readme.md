@@ -1,6 +1,8 @@
 # ENPM808X Mid Term Project- 2D Path Planning using A*
 [![Build Status](https://travis-ci.org/amrish1222/Path-Planning-A_star.svg?branch=master)](https://travis-ci.org/amrish1222/Path-Planning-A_star)
 [![Coverage Status](https://coveralls.io/repos/github/amrish1222/Path-Planning-A_star/badge.svg?branch=master)](https://coveralls.io/github/amrish1222/Path-Planning-A_star?branch=master)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/amrish1222/PathPlanning_A_star/master/LICENSE)
+
 ---
 
 ## Overview
