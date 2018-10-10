@@ -5,12 +5,18 @@
 
 ---
 
-## Overview
+## Project Overview
 
-Simple starter C++ project with:
+Motion/Navigation
+2D path planning of known map using A* algorithm module for ACME Robotics.
 
-- cmake
-- googletest
+This module will take an image of the known map with obstacles in black on a white background as an input.
+Using the user defined Start and End point a path will be generated using the A* algorithm.
+
+## Development Process
+
+This module will be developed using the Solo Iterative Process(SIP) and agile development in a 2 week sprint method.
+The spreadsheet for the Product log and sprint details can be found in this link-[Product Backlog](https://docs.google.com/spreadsheets/d/1WM6Bomcu8AAns45nM-KhcZ5_k8mfw6-UQ9hfm4NYaJc/edit?usp=sharing)
 
 ## Standard install via command-line
 ```
