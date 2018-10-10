@@ -16,7 +16,7 @@ Using the user defined Start and End point a path will be generated using the A*
 ## Development Process
 
 This module will be developed using the Solo Iterative Process(SIP) and agile development in a 2 week sprint method.
-The spreadsheet for the Product log and sprint details can be found in this link-[Agile Development Spreadsheet](https://docs.google.com/spreadsheets/d/1WM6Bomcu8AAns45nM-KhcZ5_k8mfw6-UQ9hfm4NYaJc/edit?usp=sharing)
+The spreadsheet for the Product log, iteration backlog, work log and sprint details can be found in this link-[Agile Development Spreadsheet](https://docs.google.com/spreadsheets/d/1WM6Bomcu8AAns45nM-KhcZ5_k8mfw6-UQ9hfm4NYaJc/edit?usp=sharing)
 
 ## Requirements
 This project requires the following
@@ -44,7 +44,6 @@ This generates a index.html page in the build/coverage sub-directory that can be
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
 cd <path to repository>
 mkdir build
 cd build
