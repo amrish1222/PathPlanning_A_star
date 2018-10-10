@@ -16,13 +16,17 @@ Using the user defined Start and End point a path will be generated using the A*
 ## Development Process
 
 This module will be developed using the Solo Iterative Process(SIP) and agile development in a 2 week sprint method.
-The spreadsheet for the Product log and sprint details can be found in this link-[Product Backlog](https://docs.google.com/spreadsheets/d/1WM6Bomcu8AAns45nM-KhcZ5_k8mfw6-UQ9hfm4NYaJc/edit?usp=sharing)
+The spreadsheet for the Product log and sprint details can be found in this link-[Agile Development Spreadsheet](https://docs.google.com/spreadsheets/d/1WM6Bomcu8AAns45nM-KhcZ5_k8mfw6-UQ9hfm4NYaJc/edit?usp=sharing)
 
 ## Requirements
 This project requires the following
 - cmake
 - googletest
 - OpenCV
+
+## OpenCV with CMAKE
+Information on update CmakeLists.txt for using OpenCV- [Link](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_gcc_cmake/linux_gcc_cmake.html)
+
 
 ## Installations
 - [CMAKE](https://cmake.org/install/)
