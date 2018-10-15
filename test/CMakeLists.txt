@@ -3,7 +3,10 @@ set(GTEST_SHUFFLE 1)
 add_executable(
     cpp-test
     main.cpp
-    test.cpp
+    ../app/Arena.cpp
+    ../app/AStarAlgorithm.cpp
+    ../app/PathOutput.cpp
+    ArenaClassTest.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
