@@ -5,7 +5,10 @@
  */
 #include <iostream>
 
-int main()
-{
-    return 0;
+#include "../include/Arena.h"
+#include "../include/AStarAlgorithm.h"
+#include "../include/PathOutput.h"
+
+int main() {
+  return 0;
 }

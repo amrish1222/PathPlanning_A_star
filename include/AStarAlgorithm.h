@@ -16,32 +16,49 @@ class AStarAlgorithm {
   /**
    * @brief Stores the cost function f
    */
-  int storeG_Cost;
+  double storeG_Cost;
 
   /**
    * @brief X coordinate of Current position of iteration
    */
-  int CurrentPtX;
+  int currentPtX;
 
   /**
    * @brief Y coordinate of Current position of iteration
    */
-  int CurrentPTY;
+  int currentPtY;
 
   /**
    * @brief X coordinate of Target position of iteration
    */
-  int TargetPtX;
+  int targetPtX;
 
   /**
    * @brief Y coordinate of Target position of iteration
    */
-  int TargetPtY;
+  int targetPtY;
+
+ public:
+  AStarAlgorithm();
+  virtual ~AStarAlgorithm();
 
   /**
    * @brief Stores the positions that were iterated through
    */
-  int SampledPts[][];
+  int sampledPts[100][100];
+
+  /**
+   * @brief Holds the all the information about the path
+   * 0- free space, 1- obstacle, 2- start point
+   * 3- end point, 4- path.
+   * including free space, obstacles and generated path.
+   */
+  int outputpath[100][100];
+
+  /**
+   * @brief instance of class Arena
+   */
+  Arena _arena;
 
   /**
    * @brief gets the cost between the two points (x1,y1)
@@ -51,17 +68,17 @@ class AStarAlgorithm {
    * @param  x2
    * @param  y2
    * @return int
-   * @return none.
+   * @return the cost between the two points (x1,y1)
+   * and (x2,y2).
    */
-  int getCost(int x1, int y1, int x2, int y2);
+  double getCost(int x1, int y1, int x2, int y2);
 
   /**
    * @brief checks whether the point is inside an obstacle
    * @param x
    * @param y
    * @param _arena
-   * @return bool
-   * @return none.
+   * @return boolean whether point is in obstacle
    */
   bool isPtInObstacle(int x, int y, Arena _arena);
 
@@ -69,26 +86,25 @@ class AStarAlgorithm {
    * @brief checks whether the point has already been sampled
    * @param x
    * @param y
-   * @return bool
+   * @return boolean whether point is sampled
    */
   bool isPtSampled(int x, int y);
 
- public:
-  AStarAlgorithm();
-  virtual ~AStarAlgorithm();
+  /**
+   * @brief updates the sampledPts
+   * @param x
+   * @param y
+   * @return none
+   */
+  void setPtAsSampled(int x, int y);
 
   /**
-   * @brief Holds the all the information about the path
-   * 0- free space, 1- obstacle, 2- start point
-   * 3- end point, 4- path.
-   * including free space, obstacles and generated path.
+   * @brief sets the _arena variable from a source
+   * @param Arena
+   * @return none
    */
-  int Outputpath[][];
+  void setArena(Arena arena1);
 
-  /**
-   * @brief instance of class Arena
-   */
-  Arena _arena;
 
   /**
    * @brief Holds the all the information about the path

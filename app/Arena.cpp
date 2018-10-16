@@ -7,9 +7,13 @@
 
 #include "../include/Arena.h"
 
+/**
+ * @brief Constructor for Arena Class
+ * @param none
+ * @return none.
+ */
 Arena::Arena() {
-  // TODO Auto-generated constructor stub
-  gridArena[100][100] = {};
+  gridArena[4][4] = {};
   startPtX = 0;
   startPtY = 0;
   endPtX = 0;
@@ -19,69 +23,76 @@ Arena::Arena() {
 }
 
 Arena::~Arena() {
-  // TODO Auto-generated destructor stub
 }
 
 /**
  * @brief Sets the GridSize of the arena
- * @param none
+ * @param x - x - coordinate of point
+ * @param y - y - coordinate of point
  * @return none.
  */
-void Arena::setArenaSize() {
-
+void Arena::setArenaSize(int x, int y) {
 }
 
 /**
  * @brief Sets the start point of the robot
- * @param none
+ * @param x - x - coordinate of point
+ * @param y - y - coordinate of point
  * @return none.
  */
-void Arena::setStartPt() {
-
+void Arena::setStartPt(int x, int y) {
 }
 
 /**
  * @brief Sets the end point of the robot
- * @param none
+ * @param x - x - coordinate of point
+ * @param y - y - coordinate of point
  * @return none.
  */
-void Arena::setEndPt() {
-
+void Arena::setEndPt(int x, int y) {
 }
 
 /**
  * @brief gets the workspace from the user as input
- * @param gridArena[][]
+ * @param sin references for input stream
+ * @param sout reference for output stream
  * @return none.
  */
-void Arena::getWorkspace(int &gridArena[][]) {
-
+void Arena::getWorkspace(std::istream &sin, std::ostream &sout) {
 }
 
 /**
  * @brief Gets the  arena size from the user
- * @param none
+ * @param sin references for input stream
+ * @param sout reference for output stream
  * @return none.
  */
-void Arena::getArenaSize() {
-
+void Arena::getArenaSize(std::istream &in, std::ostream &out) {
 }
 
 /**
  * @brief retrieves the Start point from the user
- * @param none
+ * @param sin references for input stream
+ * @param sout reference for output stream
  * @return none.
  */
-void Arena::getStartPt() {
-
+void Arena::getStartPt(std::istream &in, std::ostream &out) {
 }
 
 /**
  * @brief retrieves the End point from the user
+ * @param sin references for input stream
+ * @param sout reference for output stream
+ * @return none.
+ */
+void Arena::getEndPt(std::istream &in, std::ostream &out) {
+}
+
+/**
+ * @brief Displays the arena in the terminal
  * @param none
  * @return none.
  */
-void Arena::getEndPt() {
-
+void Arena::displayWorkspace() {
 }
 

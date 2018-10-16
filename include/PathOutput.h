@@ -7,24 +7,47 @@
 #ifndef INCLUDE_PATHOUTPUT_H_
 #define INCLUDE_PATHOUTPUT_H_
 
+#include <iostream>
+#include <sstream>
+
+#include "../include/AStarAlgorithm.h"
+#include "../include/Arena.h"
+
 class PathOutput {
+ private:
+  /**
+   * @brief object for AStarAlgorithm class
+   */
+  AStarAlgorithm _AStarAlg;
+
+  /**
+   * @brief Outputs the required character for the
+   * identifier
+   * @param integer
+   * @return char
+   */
+  char getCharForPt(int identifier);
+
  public:
   PathOutput();
   virtual ~PathOutput();
 
   /**
-   * @brief X coordinate of start point
+   * @brief Displays the path on the terminal
+   * 0- free space and 1- obstacle
+   * S- start point, E- end point
+   * *- path
+   * @param std::ostream
+   * @return none.
    */
-  int path[][];
+  void DisplayPath(std::ostream &sout);
 
   /**
-   * @brief Saves a file to build folder
-   * with user input
+   * @brief Assigning _AStar Variable
    * @param none
    * @return none.
    */
-  int OutputPath2File();
-
+  void setAStar(AStarAlgorithm AStar1);
 };
 
 #endif /* INCLUDE_PATHOUTPUT_H_ */
