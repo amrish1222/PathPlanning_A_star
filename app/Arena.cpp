@@ -32,6 +32,8 @@ Arena::~Arena() {
  * @return none.
  */
 void Arena::setArenaSize(int x, int y) {
+  Arena::maxX = x;
+  Arena::maxY = y;
 }
 
 /**
@@ -41,6 +43,8 @@ void Arena::setArenaSize(int x, int y) {
  * @return none.
  */
 void Arena::setStartPt(int x, int y) {
+  Arena::startPtX = x;
+  Arena::startPtY = y;
 }
 
 /**
@@ -50,6 +54,8 @@ void Arena::setStartPt(int x, int y) {
  * @return none.
  */
 void Arena::setEndPt(int x, int y) {
+  Arena::endPtX = x;
+  Arena::endPtY = y;
 }
 
 /**
@@ -59,6 +65,25 @@ void Arena::setEndPt(int x, int y) {
  * @return none.
  */
 void Arena::getWorkspace(std::istream &sin, std::ostream &sout) {
+  // getting the arena size
+  getArenaSize(sin, sout);
+  sout << "Enter the number of obstacles in the grid:";
+// Getting input of number of obstacles in grid
+  int noOfObstacles = 0;
+// Position of obstacle
+  int xPos;
+  int yPos;
+  sin >> noOfObstacles;
+  for (int i = 0; i < noOfObstacles; i++) {
+    sout << "X" << i + 1 << ":";
+    sin >> xPos;
+    sout << "Y" << i + 1 << ":";
+    sin >> yPos;
+    Arena::gridArena[xPos][yPos] = 1;
+  }
+  getStartPt(sin, sout);
+  getEndPt(sin, sout);
+  displayWorkspace();
 }
 
 /**
@@ -68,6 +93,16 @@ void Arena::getWorkspace(std::istream &sin, std::ostream &sout) {
  * @return none.
  */
 void Arena::getArenaSize(std::istream &in, std::ostream &out) {
+  int x;
+  int y;
+  // Getting the Arena size in X and Y from the user by prompting
+  out << "Enter Arena dimensions" << std::endl;
+  out << "X:";
+  in >> x;
+  out << "Y:";
+  in >> y;
+  // Setting the Variables related to the size of the Arena
+  Arena::setArenaSize(x, y);
 }
 
 /**
@@ -77,6 +112,16 @@ void Arena::getArenaSize(std::istream &in, std::ostream &out) {
  * @return none.
  */
 void Arena::getStartPt(std::istream &in, std::ostream &out) {
+  int x;
+  int y;
+  // Getting the Start point in X and Y from the user by prompting
+  out << "Enter Start Point" << std::endl;
+  out << "X:";
+  in >> x;
+  out << "Y:";
+  in >> y;
+  // Setting the Variables related to the Start point
+  Arena::setStartPt(x, y);
 }
 
 /**
@@ -86,6 +131,16 @@ void Arena::getStartPt(std::istream &in, std::ostream &out) {
  * @return none.
  */
 void Arena::getEndPt(std::istream &in, std::ostream &out) {
+  int x;
+  int y;
+  // Getting the End point in X and Y from the user by prompting
+  out << "Enter End Point" << std::endl;
+  out << "X:";
+  in >> x;
+  out << "Y:";
+  in >> y;
+  // Setting the Variables related to the Start point
+  Arena::setEndPt(x, y);
 }
 
 /**
@@ -94,5 +149,13 @@ void Arena::getEndPt(std::istream &in, std::ostream &out) {
  * @return none.
  */
 void Arena::displayWorkspace() {
+  for (int j = 0; j <= Arena::maxY; j++) {
+    for (int i = 0; i <= Arena::maxX; i++) {
+      //std::cout << "," << i << "," << j;
+      std::cout << Arena::gridArena[i][j];
+    }
+    std::cout << std::endl;
+  }
+  std::cout << std::endl;
 }
 
