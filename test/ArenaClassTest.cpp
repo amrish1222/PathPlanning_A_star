@@ -1,14 +1,14 @@
-/** @file test/main.cpp
+/** @file test/ArenaClassTest.cpp
  * @brief GoogleTest- unit tests
  * @author Amrish Baskaran
  * Copyright 2018 Amrish Baskaran
  */
+#include<iostream>
+#include<sstream>
 
 #include <gtest/gtest.h>
 
 #include"../include/Arena.h"
-#include"../include/AStarAlgorithm.h"
-#include"../include/PathOutput.h"
 
 /**
  * @brief Fixture of Arena class
