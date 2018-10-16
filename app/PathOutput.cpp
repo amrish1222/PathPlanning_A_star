@@ -26,6 +26,7 @@ PathOutput::~PathOutput() {
  * @return none.
  */
 void PathOutput::setAStar(AStarAlgorithm AStar1) {
+  _AStarAlg = AStar1;
 }
 
 /**
@@ -35,7 +36,25 @@ void PathOutput::setAStar(AStarAlgorithm AStar1) {
  * @return char
  */
 char PathOutput::getCharForPt(int identifier) {
-   return '0';
+  char c;
+  switch (identifier) {
+    case 0:
+      c = '0';
+      break;
+    case 1:
+      c = '1';
+      break;
+    case 2:
+      c = 'S';
+      break;
+    case 3:
+      c = 'E';
+      break;
+    case 4:
+      c = '*';
+      break;
+  }
+  return c;
 }
 
 /**
@@ -44,4 +63,13 @@ char PathOutput::getCharForPt(int identifier) {
  * @return none.
  */
 void PathOutput::DisplayPath(std::ostream &sout) {
+  int maxX = _AStarAlg._arena.maxX;
+  int maxY = _AStarAlg._arena.maxY;
+  for (int j = 0; j <= maxY; j++) {
+    for (int i = 0; i <= maxX; i++) {
+      sout << getCharForPt(_AStarAlg.outputpath[i][j]);
+    }
+    sout << std::endl;
+  }
+  sout << std::endl;
 }
