@@ -71,5 +71,5 @@ void PathOutput::DisplayPath(std::ostream &sout) {
     }
     sout << std::endl;
   }
-  sout << std::endl;
+  // sout << std::endl;
 }
