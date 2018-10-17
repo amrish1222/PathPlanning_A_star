@@ -1,5 +1,5 @@
-/** @file Arena.h
- * @brief Arena header file.
+/** @file PathOutput.h
+ * @brief PathOutput header file.
  * @author Amrish Baskaran
  * Copyright 2018 Amrish Baskaran
  */

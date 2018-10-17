@@ -149,9 +149,9 @@ void Arena::getEndPt(std::istream &in, std::ostream &out) {
  * @return none.
  */
 void Arena::displayWorkspace() {
+  // display each element of the map
   for (int j = 0; j <= Arena::maxY; j++) {
     for (int i = 0; i <= Arena::maxX; i++) {
-      //std::cout << "," << i << "," << j;
       std::cout << Arena::gridArena[i][j];
     }
     std::cout << std::endl;

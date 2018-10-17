@@ -1,9 +1,9 @@
-/** @file Arena.cpp
- * @brief Arena  source file
+/** @file AStarAlgorithm.cpp
+ * @brief AStarAlgorithm  source file
  * @author Amrish Baskaran
  * Copyright 2018 Amrish Baskaran
  */
-#include<math.h>
+#include <math.h>
 #include <algorithm>
 #include <iterator>
 
@@ -89,7 +89,7 @@ bool AStarAlgorithm::isPtSampled(int x, int y) {
  * @return none
  */
 void AStarAlgorithm::compute() {
-// Variable to check if goal/ end point is reached
+  // Variable to check if goal/ end point is reached
   bool goalReached = false;
   // variables to store End point
   int startPtX = AStarAlgorithm::_arena.startPtX;
@@ -157,9 +157,7 @@ void AStarAlgorithm::compute() {
     // set this point is sampled
     setPtAsSampled(tempX, tempY);
   // Check if end point is reached
-
   }
-
 }
 
 /**

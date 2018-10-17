@@ -1,5 +1,5 @@
-/** @file Arena.h
- * @brief Arena header file.
+/** @file AStarAlgorithm.h
+ * @brief AStarAlgorithm header file.
  * @author Amrish Baskaran
  * Copyright 2018 Amrish Baskaran
  */

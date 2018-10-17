@@ -4,18 +4,20 @@
  * Copyright 2018 Amrish Baskaran
  */
 
+#include<gtest/gtest.h>
+
 #include<iostream>
 #include<string>
 #include<sstream>
 #include<fstream>
 
-#include<gtest/gtest.h>
-#include<gmock/gmock.h>
-
 #include"../include/Arena.h"
 #include"../include/AStarAlgorithm.h"
 #include"../include/PathOutput.h"
 
+/**
+ * @brief Test fixture for PathOutput class
+ */
 struct PathOutputTest : public testing::Test {
   PathOutput *PO1;
   void SetUp() {
@@ -37,7 +39,10 @@ struct PathOutputTest : public testing::Test {
   }
 };
 
-TEST_F(PathOutputTest,displayPathTest) {
+/**
+ * @brief Test for displayPath function
+ */
+TEST_F(PathOutputTest, displayPathTest) {
   std::stringstream sout1;
   PO1->DisplayPath(sout1);
   EXPECT_STREQ("S10\n1*0\n00E\n", sout1.str().c_str());

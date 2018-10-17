@@ -3,10 +3,10 @@
  * @author Amrish Baskaran
  * Copyright 2018 Amrish Baskaran
  */
-#include<iostream>
-#include<sstream>
-
 #include <gtest/gtest.h>
+
+#include<sstream>
+#include<iostream>
 
 #include"../include/Arena.h"
 
@@ -37,6 +37,9 @@ TEST(ArenaClassTest, InitValuesTest) {
   EXPECT_EQ(0, arena2.maxY);
 }
 
+/**
+ * @brief Test for getWorkspace
+ */
 TEST_F(ArenaTest, GetWorkspaceTest) {
   std::stringstream sin;
   std::stringstream sout;

@@ -3,15 +3,14 @@
  * @author Amrish Baskaran
  * Copyright 2018 Amrish Baskaran
  */
-
+#include "../include/PathOutput.h"
+#include <string.h>
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include <string.h>
 
-#include <../include/AStarAlgorithm.h>
+#include "../include/AStarAlgorithm.h"
 #include "../include/Arena.h"
-#include "../include/PathOutput.h"
 
 PathOutput::PathOutput() {
 }
