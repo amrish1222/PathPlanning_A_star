@@ -21,8 +21,8 @@ AStarAlgorithm::AStarAlgorithm() {
   currentPtY = 0;
   targetPtX = 0;
   targetPtY = 0;
-  sampledPts[100][100]= {};
-  outputpath[100][100]= {};
+  sampledPts[99][99]= {};
+  outputpath[99][99]= {};
 }
 
 /**
@@ -108,7 +108,7 @@ void AStarAlgorithm::compute() {
   outputpath[startPtX][startPtY] = 2;
   outputpath[endPtX][endPtY] = 3;
   // Variables for storing temp cost and location
-  double tempCost = 999999;
+  double tempCost = pow(2, 9);
   double tempGCost = 0;
   int tempX = currentPtX;
   int tempY = currentPtY;
